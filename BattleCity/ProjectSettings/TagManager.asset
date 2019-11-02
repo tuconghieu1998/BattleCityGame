@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Brick
   - Steel
+  - Small
+  - Fast
+  - Big
+  - Armored
   layers:
   - Default
   - TransparentFX
@@ -17,10 +21,10 @@ TagManager:
   - 
   - Brick
   - Boundary
-  - 
-  - 
-  - 
-  - 
+  - PlayerTank
+  - PlayerProjectile
+  - EnemyTank
+  - EnemyProjectile
   - 
   - 
   - 

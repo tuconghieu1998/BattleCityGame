@@ -6,8 +6,10 @@ public class Player : Movement
 {
     Rigidbody2D rb2d;
     float h, v;
+    WeaponController wc;
     void Start()
     {
+        wc = GetComponentInChildren<WeaponController>();
         rb2d = GetComponent<Rigidbody2D>();
     }
 
@@ -23,5 +25,9 @@ public class Player : Movement
     {
         h = Input.GetAxisRaw("Horizontal");
         v = Input.GetAxisRaw("Vertical");
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            wc.Fire();
+        }
     }
 }

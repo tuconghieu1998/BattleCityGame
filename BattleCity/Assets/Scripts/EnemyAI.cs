@@ -8,12 +8,21 @@ public class EnemyAI : Movement
     float h, v;
     [SerializeField]
     LayerMask blockingLayer;
+    WeaponController wc;
     enum Direction { Up, Down, Left, Right };
 
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         RandomDirection();
+        wc = GetComponentInChildren<WeaponController>();
+        Invoke("FireWhenWanted", Random.Range(1f, 5f));
+    }
+
+    void FireWhenWanted()
+    {
+        wc.Fire();
+        Invoke("FireWhenWanted", Random.Range(1f, 5f));
     }
 
     public void RandomDirection()
