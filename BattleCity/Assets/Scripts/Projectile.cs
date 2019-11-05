@@ -43,6 +43,7 @@ public class Projectile : MonoBehaviour
         }
         //keep the projectile inactive if hit anything. this will allow the projectile to be reused instead of wasting resource for garbage collector to clear it from memory
         this.gameObject.SetActive(false);
+        //print("abcd");
     }
     void OnDisable()
     {
